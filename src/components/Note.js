@@ -1,5 +1,5 @@
 
-const Note =({id, text , date})=>{
+const Note =({id, text , date, handleDeleteNote})=>{
     return (
         <>
         <div className="note">
@@ -9,7 +9,7 @@ const Note =({id, text , date})=>{
             <div  className =" note-footer">
        <small>          {date}</small>
       
-       <small >Icon</small>
+       <button className="save"  onClick={()=> handleDeleteNote(id)}> Delete</button>
 
             </div>
 
